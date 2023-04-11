@@ -1,0 +1,274 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container  {
+    position: sticky;
+    z-index: 4;
+    top:0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #10002b;
+
+}
+.navbar h1 {
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+}
+.navbar h1 b{
+    font-size: 40px;
+}
+.navbar-logo {
+justify-self: start;
+margin-left: 25px;
+color: #FFF;
+margin-top: 4vh;
+cursor: pointer;
+}
+
+.ver-carrito {
+    margin-right: 25px;
+    margin-top: 4vh;
+    cursor: pointer;
+    height: 40px;
+}
+
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/Preentrega_dos/Pre-entrega-dos_JavaScript/asset/img/SetUp_gamer.jpeg)
+}
+.banner-container {
+    text-align: center;
+    padding: 15% 0;
+}
+.banner h1{
+    margin: 0;
+    color: #FFF;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 60px;
+    font-weight: bold;
+    opacity: .9;
+}
+
+.banner p {
+    font-size: 30px;
+    color: #FFF;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.container-setup-products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 15px
+
+}
+.tarjetas{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+.tarjetas h3{
+    font-size:25px;
+    margin-top: 5px;
+
+}
+
+.tarjetas > img {
+    width: 90%;
+    height: 250px;
+    /* background-image: cover ; */
+}
+.price {
+    color: #240046;
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.precio-anclaje {
+    font-weight: 200;
+    color: red;
+    text-decoration: line-through;
+    margin: 0;
+}
+.tarjetas button {
+    margin: 10px;
+}
+.tarjetas button:hover{
+    opacity: .7;
+}
+
+.modal-container {
+    width: 80%;
+    margin: 0 10%;
+    margin-bottom: 30px;
+    max-height: 78vh;
+    color: #e0aaff;
+    background-color: #10002b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 10;
+    top: 150px;
+    scrollbar-color: none;
+    opacity: .9;
+    border-radius: 20px;
+    /* border: solid .5px #c77dff; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+    
+}
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #FFF;
+    width: 100%;
+    height: 90px;
+}
+.modal-header-title {
+    justify-self: start;
+}
+
+
+.modal-container > .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+.modal-content h3 {
+    font-size: 20px;
+    width: 200px;
+}
+.modal-content p {
+    margin: 0;
+}
+
+.modal-container > div > img {
+    height: 120px;
+    width: 120px;
+}
+.total-anclaje {
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.total-anclaje div {
+    width: 30%;
+}
+
+.total-pago{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.comprar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#pagar{
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    background-color: #6a994e;
+    transition: 0.4s ease;
+    
+}
+#pagar:hover {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3), 0 0 0.5px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.3) ;   
+    
+}
+.modal-header-button {
+    cursor: pointer;
+    width: 5px;
+    height: auto;
+}
+
+.dlt-product {
+cursor: pointer;
+box-shadow: 0 0 50px #a945c7, 0 0 80px #a945c7, 0 0 100px #a945c7 ;
+border-radius: 50%;
+}
+
+.conteo-carrito {
+    background-color: rgba(255, 0, 0, 0.765);
+    color: #FFF;
+    /* box-shadow: 0 2px 8px 0 rgba(243, 6, 6, 0.4); */
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 2px;
+    bottom: 38px;
+    right: 14px;
+    position: absolute;
+    display: none;
+}
+
+
+.precio_producto {
+    width: 120px;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.quantity-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+    padding-top: 0;
+    background-color: white;
+    color: #240046;
+    border-radius: 25%;
+
+}
+
+.btn_operation{
+    background-color: white;
+    overflow: hidden;
+    border: none;
+    border-radius: 30%;
+    transition: .5s;
+}
+.btn_operation:hover{
+    box-shadow: 0 0 10px #a945c7, 0 0 4px #a945c7, 0 0 80px #a945c7
+}
+.subtotal-p {
+    width: 100px;
+    text-align: center;
+}
