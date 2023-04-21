@@ -2,9 +2,7 @@ const shopContainer = document.getElementById("shopContainer");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modalContainer");
 const conteoCarrito = document.getElementById("conteoCarrito");
-// const conteoCarritoBuyPage = document.getElementById("conteoCarrito-buyPage");
 const productListBuyPage = document.getElementById("product-list-buy-page");
-// const irAPagar = document.getElementById("pagar");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -54,13 +52,13 @@ productos.forEach((product) => {
       duration: 2000,
       avatar: "./asset/img/check.png",
       close: true,
-      gravity: "top", // `top` or `bottom`
-      position: "right", // `left`, `center` or `right`
-      stopOnFocus: true, // Prevents dismissing of toast on hover
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
       style: {
         background: "linear-gradient(to right, #e0aaff, #7371fc)",
       },
-      onClick: function () {}, // Callback after click
+      onClick: function () {},
     }).showToast();
   });
 });

@@ -1,6 +1,7 @@
 const conteoCarritoBuyPage = document.getElementById("conteoCarrito-buyPage");
 const listaDeProductos = document.getElementById("product-list-buy-page");
 const totalDePagoCliente = document.getElementById("total__de__pago");
+const volverAComprar = document.getElementById("boton__return");
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let sumaDePago = 0;
 
@@ -39,43 +40,7 @@ const recorrerCarritoBuyPage = () => {
   });
 
   listaDeProductos.append(carritoContentBuyPage);
-
-  // const sumarBuyPage = () => {
-  //   const referenciaBuyPage = carrito.reduce(
-  //     (acu, ele) => acu + ele.precioReferencia * ele.cantidad,
-  //     0
-  //   );
-  //   const totalBuyPage = carrito.reduce(
-  //     (accu, elem) => accu + elem.precio * elem.cantidad,
-  //     0
-  //   );
-
-  //   //   const totalCarritoBuyPage = document.createElement("div");
-  //   //   totalAnclaje.className = "list-group-item d-flex lg-sm total_buy_page";
-  //   //   totalAnclaje.innerHTML = `
-  //   //     <div>
-  //   //     </div>
-  //   //     <div class = "total_pago">
-  //   //       <p>Total a Pagar: $ ${totalBuyPage}</p>
-  //   //     </div>
-  //   //     `;
-  //   //   //   <div class = "comprar">
-  //   //   //   <a href="./buyPage.html"><button id = "pagar">Ir a Pagar!</button></a>
-  //   //   // </div>
-  //   //   listaDeProductos.append(totalCarritoBuyPage);
-  //   // };
-  //   // sumarBuyPage();
-  // };
 };
-// montoTotal.createElement("div");
-// montoTotal.className = "list-group-item d-flex lg-sm";
-// montoTotal.innerHTML = `
-//   <div>
-//     <h6 class="my-0"> Total a Pagar:<h6>
-//     <span class="text-body-primary">$ ${total}</span>
-//   </div>
-//   `;
-// totalDePagoCliente.append(montoTotal);
 
 recorrerCarritoBuyPage();
 
@@ -83,16 +48,17 @@ const pagarProductos = () => {
   let pagarMonto = document.createElement("div");
   pagarMonto.className = "d-flex justify-content-between lh-sm pagar_monto";
   pagarMonto.innerHTML = `
-
     <span class="text-primary">CLP$ ${sumaDePago}</span>
-
-   
-  
   `;
   totalDePagoCliente.append(pagarMonto);
-  //   <div>
-  //   <a href="./index.html"><button>Seguir Comprando</button></a>
-  // </div>
-  console.log(sumaDePago);
+
+  let returnBottom = document.createElement("div");
+  returnBottom.className = "d-flex justify-content-center lh-sm";
+  returnBottom.innerHTML = `
+  <div>
+  <a href="./index.html"><button class = "btn btn-primary">Seguir Comprando</button></a>
+  </div>
+  `;
+  volverAComprar.append(returnBottom);
 };
 pagarProductos();

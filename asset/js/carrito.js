@@ -107,9 +107,6 @@ const sumarCarrito = () => {
       <p>Total a Pagar: $ ${total}</p>
     </div>
     `;
-  //   <div class = "comprar">
-  //   <a href="./buyPage.html"><button id = "pagar">Ir a Pagar!</button></a>
-  // </div>
   modalContainer.append(totalAnclaje);
 
   let botonDePago = carrito.length;
@@ -118,7 +115,7 @@ const sumarCarrito = () => {
     const botonAPagar = document.createElement("div");
     botonAPagar.className = "comprar";
     botonAPagar.innerHTML = `
-  <a href="./buyPage.html"><button id = "pagar">Ir a Pagar!</button></a>
+  <a href="./buyPage.html"><button class = "pagar">Ir a Pagar!</button></a>
   `;
     totalAnclaje.append(botonAPagar);
   }
