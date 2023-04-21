@@ -3,7 +3,7 @@ const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modalContainer");
 const conteoCarrito = document.getElementById("conteoCarrito");
 // const conteoCarritoBuyPage = document.getElementById("conteoCarrito-buyPage");
-// const productListBuyPage = document.getElementById("product-list-buy-page");
+const productListBuyPage = document.getElementById("product-list-buy-page");
 // const irAPagar = document.getElementById("pagar");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];

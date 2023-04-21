@@ -106,11 +106,22 @@ const sumarCarrito = () => {
       <p class = "precio-anclaje">Valor Referencia: $ ${totalReferencia}</p>
       <p>Total a Pagar: $ ${total}</p>
     </div>
-    <div class = "comprar">
-      <a href="./byPage.html"><button id = "pagar">Ir a Pagar!</button></a>
-    </div>
     `;
+  //   <div class = "comprar">
+  //   <a href="./buyPage.html"><button id = "pagar">Ir a Pagar!</button></a>
+  // </div>
   modalContainer.append(totalAnclaje);
+
+  let botonDePago = carrito.length;
+
+  if (botonDePago != 0) {
+    const botonAPagar = document.createElement("div");
+    botonAPagar.className = "comprar";
+    botonAPagar.innerHTML = `
+  <a href="./buyPage.html"><button id = "pagar">Ir a Pagar!</button></a>
+  `;
+    totalAnclaje.append(botonAPagar);
+  }
 };
 
 const pushCarrito = () => {
